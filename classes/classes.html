@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Prototype Inheritance</title>
+</head>
+
+<body>
+    <script>
+    function Recipe(name, country) {
+        this.name = name;
+        this.country = country;
+    }
+
+    Recipe.prototype.cook = function() {
+        console.log(`I like to cook ${this.name}`);
+    };
+
+    Recipe.prototype.eat = function() {
+        console.log(`Yummy!`);
+    };
+
+    const lasagna = new Recipe('Lasagna', 'Italy');
+    const pho = new Recipe('Pho', 'Vietnam');
+
+</script>
+</body>
+
+</html>
