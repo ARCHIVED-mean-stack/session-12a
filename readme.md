@@ -47,9 +47,7 @@ const box = document.querySelector('.box');
 
 ##Webpack
 
-`$ mkdir es6modules`
-`$ cd es6modules`
-`$ touch app.js`
+Create `app.js` in es6modules
 
 - getting modules: npm install with the following payload:
 
@@ -245,10 +243,11 @@ import { apikey } from './mymodule/config'
 
 In browser console:
 
+`> Array.prototype` and examine the prototype
 `> const names = ['hamburger', 'fries']`
 `> names.join()`
 `> names.pop()`
-`> Array.prototype` and examine the prototype
+
 `> lasagna.eat()`
 `> lasagna` and examine the prototype
 
@@ -305,9 +304,6 @@ class Recipe {
     }
     eat(){
         console.log(`Yummy!`);
-    }
-    get description() {
-      return `${this.name} is from ${this.country}.`;
     }
     get description() {
       return `${this.name} is from ${this.country}.`;
@@ -418,7 +414,6 @@ Create `app.ts`
 
 ```js
 let myString: string = "Hello world"
-string = 12;
 ```
 
 `$ tsc` to see the configuration options.
@@ -493,23 +488,6 @@ var container = document.getElementById('container');
 function Counter(el) {
     this.count = 0;
     el.innerHTML = this.count;
-
-    let _this = this;
-
-    el.addEventListener('click',
-        function() {
-            _this.count += 1;
-            el.innerHTML = this.count;
-        })
-}
-new Counter(container);
-```
-
-```js
-var container = document.getElementById('container');
-function Counter(el) {
-    this.count = 0;
-    el.innerHTML = this.count;
     el.addEventListener('click',
         () => {
             this.count += 1;
@@ -526,7 +504,8 @@ var a = 1;
 var b = 5;
 [a,b] = [b,a];
 ```
-
+`> a`
+`> b`
 
 ##Angular 2
 
